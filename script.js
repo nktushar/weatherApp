@@ -24,11 +24,13 @@ function displayWeather(data){
 // }
 document.querySelector(".search-btn").addEventListener("click",function(){
     fetchWeather(document.querySelector(".search-bar").value);
+    document.querySelector(".search-bar").value="";
 });
 
 document.querySelector(".search-bar").addEventListener("keyup", function(event){
     if(event.key == "Enter"){
         fetchWeather(document.querySelector(".search-bar").value);
+        document.querySelector(".search-bar").value="";
     }
 })
 
